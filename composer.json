@@ -1,0 +1,6 @@
+{
+  "name": "toms/calendar",
+  "require": {
+    "spatie/calendar-links": "^1.6"
+  }
+}
