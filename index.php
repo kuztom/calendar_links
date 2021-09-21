@@ -57,11 +57,11 @@ use Spatie\CalendarLinks\Link;
 
 if (isset($_POST['submit'])) {
     if (!isset($_POST['title']) || trim($_POST['title']) == '') {
-        echo "Enter MEETING TITLE.";
+        echo "<div align='center'>Enter MEETING TITLE.</div>";
     } elseif (!isset($_POST['from']) || trim($_POST['from']) == '') {
-        echo "Enter FROM date and time.";
+        echo "<div align='center'>Enter FROM date and time.</div>";
     } elseif (!isset($_POST['to']) || trim($_POST['to']) == '') {
-        echo "Enter TO date and time.";
+        echo "<div align='center'>Enter TO date and time.</div>";
     } else {
 
         $from = DateTime::createFromFormat('Y-m-d H:i', str_replace('T', ' ', $_POST['from']));
