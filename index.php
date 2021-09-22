@@ -52,6 +52,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
+date_default_timezone_set('Europe/Riga');
 
 use Spatie\CalendarLinks\Link;
 
