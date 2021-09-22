@@ -72,20 +72,24 @@ if (isset($_POST['submit'])) {
             ->description($_POST['description'])
             ->address($_POST['address']);
 
-        switch ($_POST['meeting_site']) {
-            case 'google':
-                echo "<div align='center'><a href='" . $link->google() . "' target='_blank''>-> GO TO GOOGLE CALENDAR <-</a></div>";
-                break;
-            case 'yahoo':
-                echo "<div align='center'><a href='" . $link->yahoo() . "' target='_blank''>-> GO TO YAHOO <-</a></div>";
-                break;
-            case 'webOutlook':
-                echo "<div align='center'><a href='" . $link->webOutlook() . "' target='_blank''>-> GO TO OUTLOOK <-</a></div>";
-                break;
-            case 'ics':
-                echo "<div align='center'><a href='" . $link->ics() . "' target='_blank''>-> GO TO ICS <-</a></div>";
-                break;
-        }
+        $meetingSite = $_POST['meeting_site'];
+
+        echo "<br><div align='center'><a href='" . $link->{$meetingSite}() . "' target='_blank''>-> GO TO CALENDAR <-</a></div>";
+
+//        switch ($_POST['meeting_site']) {
+//            case 'google':
+//                echo "<div align='center'><a href='" . $link->google() . "' target='_blank''>-> GO TO GOOGLE CALENDAR <-</a></div>";
+//                break;
+//            case 'yahoo':
+//                echo "<div align='center'><a href='" . $link->yahoo() . "' target='_blank''>-> GO TO YAHOO <-</a></div>";
+//                break;
+//            case 'webOutlook':
+//                echo "<div align='center'><a href='" . $link->webOutlook() . "' target='_blank''>-> GO TO OUTLOOK <-</a></div>";
+//                break;
+//            case 'ics':
+//                echo "<div align='center'><a href='" . $link->ics() . "' target='_blank''>-> GO TO ICS <-</a></div>";
+//                break;
+//        }
     }
 }
 
